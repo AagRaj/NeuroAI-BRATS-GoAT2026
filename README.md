@@ -86,4 +86,5 @@ MIT, see [`LICENSE`](LICENSE).
 
 ## Team
 
-NeuroAI, Delhi Technological University — Aarush Sinha, Mehak Vasudeva, Aagnik Raj, Raghav Singh, Rohan Pillai.
+NeuroAI - Aarush Sinha, Mehak Vasudeva, Aagnik Raj, Raghav Singh, Rohan Pillai. 
+Delhi Technological University, Shahbad Daulatpur, Main Bawana Road, Delhi 110042, India.
