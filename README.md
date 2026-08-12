@@ -42,9 +42,7 @@ Inference: mirror TTA and Gaussian-weighted sliding window (both on by default),
 ├── goat_pipeline.ipynb   # run top to bottom, see REPRODUCE.md
 ├── goat_to_nnunet.py     # raw data -> nnU-Net format
 ├── goat_splits.py        # k-means fingerprint -> stratified 5-fold split, seed 42
-└── docker/               # Synapse submission container
-    ├── Dockerfile
-    └── compose.yaml
+
 ```
 
 `goat_pipeline.ipynb` runs as lettered sections on a fresh Kaggle session. GPU needs to be T4 x2 — P100 won't work, its PyTorch build has no `sm_60` kernels.
