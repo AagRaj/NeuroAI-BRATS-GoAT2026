@@ -1,0 +1,27 @@
+# nnU-Net data & environment directories — never commit these
+nnUNet_raw/
+nnUNet_preprocessed/
+nnUNet_results/
+
+# Model checkpoints — hundreds of MB each, will break a plain git push
+*.pth
+checkpoint_best.pth
+checkpoint_final.pth
+
+# Imaging data
+*.nii
+*.nii.gz
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+*.egg-info/
+venv/
+.venv/
+
+# Kaggle / notebook artifacts
+.virtual_documents/
+
+# OS
+.DS_Store
