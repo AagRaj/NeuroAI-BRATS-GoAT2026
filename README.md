@@ -1,6 +1,6 @@
 # BraTS-GoAT 2026 — Team NeuroAI
 
-Generalisation Across Tumour Entities with a From-Scratch Residual-Encoder U-Net: A Baseline and an Analysis of Training-Validation Distribution Shift
+Generalisation Across Tumor Entities with a From-Scratch Residual-Encoder U-Net: A Baseline and an Analysis of Training-Validation Distribution Shift
 
 Code for our BraTS-GoAT 2026 submission (Task 3 of the BraTS 2026 Cluster of Challenges, MICCAI 2026 Satellite Event). Team NeuroAI, Delhi Technological University.
 
@@ -26,7 +26,7 @@ Official Synapse validation leaderboard, 3-fold ensemble (folds 0, 1, 2):
 
 Architecture: nnU-Net v2, ResEnc-M, `3d_fullres`, trained from scratch. 101.94M params.
 
-Training: 250 epochs, 5-fold CV, `batch_dice=True` patched in after preprocessing (not the nnU-Net default). Needed because ~2.4% of cases have no enhancing tumour at all, so per-sample Dice goes degenerate on those, and because the leaderboard pools voxels across the whole cohort before scoring rather than per case. Single T4, roughly 300s/epoch, ~24h a fold.
+Training: 250 epochs, 5-fold CV, `batch_dice=True` patched in after preprocessing (not the nnU-Net default). Needed because ~2.4% of cases have no enhancing tumor at all, so per-sample Dice goes degenerate on those, and because the leaderboard pools voxels across the whole cohort before scoring rather than per case. Single T4, roughly 300s/epoch, ~24h a fold.
 
 Folds come from k-means fingerprinting the training cohort (k=5) on sub-region presence, volume, brain bounding-box extent, and per-modality intensity percentiles, not a random split. Seed 42. Two of the five clusters turned out to separate on brain bbox extent rather than actual tumour content — anatomical scale, not morphology, confirmed with an ablation. The other three separate on real tumour-content features.
 
