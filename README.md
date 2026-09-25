@@ -6,6 +6,8 @@ Code for our BraTS-GoAT 2026 submission (Task 3 of the BraTS 2026 Cluster of Cha
 
 Paper link goes here once it's up on OpenReview / the MICCAI proceedings.
 
+Temporary drive link: [Paper](https://drive.google.com/file/d/1hNBGyqeDxoz5onNZtJxxjMZOK4ABNyQA/view?usp=sharing)
+
 ## What this is
 
 BraTS-GoAT wants one segmentation model that generalizes across five tumour populations (adult glioma, meningioma, metastases, pediatric HGG, sub-Saharan Africa cohort), even though training data is roughly 91% adult glioma. We train a Residual-Encoder nnU-Net (ResEnc-M) from scratch, no external data or pretrained weights, and use it to actually look at why generalization is hard here. The train/validation split is structurally imbalanced, so we fingerprint the training cohort with unsupervised clustering, build stratified CV folds around that, and report Dice per fold per cluster so the majority-to-minority degradation shows up instead of getting buried in one aggregate number.
